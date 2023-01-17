@@ -1,7 +1,7 @@
 # Project domain
-European countries
+European countries.
 # Purpose
-Facilitates citizens to handle their own healthcare data, in a context in which they move around Europe. Integration of heterogeneous healthcare data to create a knowledge base that can be exploited in clinics, pharmacies, hospitals and research institutions
+Facilitates citizens to handle their own healthcare data, in a context in which they move around Europe. Integration of heterogeneous healthcare data to create a knowledge base that can be exploited in clinics, pharmacies, hospitals and research institutions.
 
 
 # Personas
