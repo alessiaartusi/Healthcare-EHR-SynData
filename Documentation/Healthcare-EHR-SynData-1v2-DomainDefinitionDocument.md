@@ -7,6 +7,9 @@ Facilitates citizens to handle their own healthcare data, in a context in which 
 # Personas
 |Name|Age|Interests|Usage|Description|
 |---|---|------|------|------|
-|Pedro|55|cardiology|Access to foreign patient health data|Cardiologist at La Fe University and Polytechnic Hospital, very handy with technologies.|
-|Sonia |27|medicine|Have access to medical data of a patient, including all the patologies and current treatments.|Medical guard in Olmeneta (Italy). Quite handy with technologies |
-|Andreas|35|Biotechnology|Lab records needed to avoid duplicate tests on the patients' samples.|Andreas is a biotehcnologist working at the university hospital in Berlin.|
+|Pedro|55|Pedro is a cardiologist at La Fe Hospital in Valencia| During its work time a foreign patient arrives to the hospital unconscious. To intervene the doctor needs to know the patient medical records in order to safely operate.|
+|Sonia|67|Sonia is an Italian woman from Olmeneta, Italy| She decides to travel around Andalusia (Spain) for a couple of weeks. One day, during her trip she notices a cutaneous rush probabily due to some allergies she is not aware of. She travels to the nearest emergency room but does not speak spanish or english.|	
+|Andreas|27|Andreas is a biotechnologist who works at the university hospital of Berlin.| His usual day in the lab consists in performing analysis on the patients' lab samples. He need a records of the already performed tests in order to avoid running duplicate tests.|
+|Giulia|28|Giulia is a PhD researcher at the University of Trento| Her study focuses is rheumatoid arthritis. In particular, she would like to go through some existing medical records to find whether there are association with previous conditions of the patients' in the developing of the disease.|		
+|Pierre|42|Pierre is a lab PI at Institute Pasteur in Paris.| During the COVID-19 pandemic he was asked by the government to perform studies on the factor associated with higher risks of having a severe pathology after the COVID-19 vaccine (SARS-COV-2). He needs data relative to the patients' medical history in order to assess some causal relationship among different health status.|
+		
