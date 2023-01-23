@@ -1,1 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title></title>
+<style>
+	*{
+	margin:10;
+	padding:0;
+}
+
+body{
+	font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	text-align:left;
+	text-margin: 10px;
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+
+
+
+div#container{
+	width:80%;
+	margin:0 auto;
+	border:3px gray solid;
+}
+
+div#header{
+	background-color:#dfeef0;
+	padding:0.7em 0 0.7em 0.5em;
+	text-align:center;
+}
+
+div#navigation{
+	text-align:left;
+	background-color:#13455e;
+	padding:0.7em 0 0.7em 0.5em;
+
+}
+
+div#navigation ul{
+	list-style-type:none;
+}
+
+div#navigation li{
+	display:inline;
+	padding-left:1.5em;
+}
+
+div#navigation a{
+	color:white;
+	font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-weight:900;
+	text-decoration:none;
+	cursor:default;
+}
+
+div#navigation a:hover{
+	color:#dfeef0;
+	font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-weight:600;
+	text-decoration:none;
+}
+
+div#navigation a#active{
+	color:#dfeef0;
+	font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-weight:900;
+	text-decoration:underline;
+}
+
+
+
+.icone{
+	width:100px;
+	height:100px;
+}
+
+div#footer{
+	background-color:#dfeef0;
+	padding:0.7em 0 0.7em 0.5em;
+	clear:center;
+	text align: center;
+
+}
+</style>
+</head>
+
+<body>
+
+
+<div id="container">
+	<div id="header">
+	<h1>Health Care-EHR-Syn Data</h1>
+	
+	</div> <!-- chiusura header-->
+	
+	<div id="navigation">
+		<ul>
+		<li><a id="active" href="#descrizione">Project Description</a></li>
+		 <li><a href="#resource">Resource</a> </li>
+		<li><a href="#informal"> Informal modeling phase </a> </li>
+		<li><a href="#formal"> Formal modeling phase</a> </li>
+		
+		</ul>
+	</div> <!-- chiusura navigation-->
+	
+	<div id="content">
+		<a name="descrizione">
+			<h2><b>Project description</h2></b>
+		<p text align:left> There is an increasing interest across European Union (EU) institutions, government and healthcare systems to digitalise the healthcare ecosystem. As it was proven by the COVID-19 pandemic, a digital healthcare ecosystem would facilitate across-borders processes, creating homogeneity across Europe. There is not a single common European Electronic Health Record (EHR) system for all EU member states. The objective of this project is to develop an easy-to-use knowledge graph that,  integrated with EHR data, will result in a tool that facilitates healthcare data visibility and transfer.
+The aim of the project is to build a knowledge graph (KG) concerning healthcare heterogeneous data about patients, professionals, facilities and other entities from European countries with different healthcare systems. This result could be the foundation to create a service which help the citizens to handle their own healthcare data, in a context in which the citizens moves around Europe. <br> <br>
+In this project we used syntetic (alrady anonymized) data to create a prototype integration serving this purpose. We followed the iTelos development methodology and improved our soulution incrementaly - starting from hypothetical use cases all the way to the final, exploitable knowledge graph while evaluating each step of the procedure. <br> <br>
+This solution can potentially be used in clinics, pharmacies, hospitals and research institutions by various personel. Security and data access aspects have not been covered in this project - the application level exploiting this KG should take care of these.
+<br>
+			
+			<a href="Documentation/Healthcare-EHR-SynData_ArtusiSalti.pdf"> Project report </a> <br><br>
+</p>
+
+
+		</a>
+
+		<a name="resource"> 
+			<h2><b>Resources</h2></b>
+			
+		<p><b> Knoledge resources</b></p>
+
+		<p><a href="https://schema.org/"> Schema.org</a></p>
+		<p><a href="https://hl7.org/fhir/"> FHIR </a></p>
+			<br>
+			
+		<p><b> Data resources</b></p>
+
+		<p><a href="https://synthea.mitre.org/"> Synthea</a> - 500 patients </p>
+		<p><a href="http://www.emrbots.org/"> EMRBOTS</a> - 100 patients, 372 admissions and 111483 laboratory observations </p><br><br>
+
+
+
+		</a>
+		<a name="informal"> 
+			<h2><b>Informal modeling phase</h2></b>
+		<p> In the informal modeling phase we integrated the knowledge layer with the data layer.
+For the knowledge layer we classified our resources into common core and contextual for each competency query. From this classification we defined 10 ETypes and the relationships between them. Then we integrate it by adding the data properties for each etype. <br>
+
+From this classification of resources we defined our <b>ETypes</b> and their <b>properties</b> as shown below. 
+<br>
+In our ER model we started with two entities, namely Patient and Doctor, since they are our ideal users of the KG; we noticed they both shared most of the data properties, such as: name, address, date of birth, gender, race and language, hence we decided to create the superclass <b>Person</b> with the data properties listed, that will be inherited by its subclasses <b>Patient</b> and <b>Doctor</b>.
+We continued by modeling the data properties of the Person, since it is the entity that is linked with most data resources. We decided to model its connections as ETypes that have their own data properties.
+
+<br><br>
+
+This diagram was defined by looking at the available data, the project’s purpose and the competency questions.
+
+<br>
+<img src="Teleologies/Formal Modeling/Logic_model.jpg" width="300" align="center">
+<br>
+		</p>			
+<p> After that the dataset previously collected are filtered and handled to obtain more suit-able sets of data for our EER model.</p>
+		<br><br>
+
+
+		</a>
+		<a name="formal">
+			<h2><b>Formal modeling phase</h2></b>
+		<p>Starting from the informal schema described in the previous section, we built the ontology in Protégé. To define entities in accordance with the FHIR standard we used the resource to search our entities and the related data properties that were to be added. Next, we uploaded the base-schema to KOS in order to integrate it with the framework ontology provided by UKC (a multilingual lexico-semantic resource - Universal Knowledge 
+Core).
+This procedure resulted in a fully formal ETG. Its structure is shown below: </p>
+			<img src="Teleologies/Informal Modeling/EER_model.pdf" width="300" align="center">
+			
+		<p>we mapped 7 different dataset with our ETG using karma linker. The problem of identity was overcome as we basically had one dataset for each etype. While for the unique identifier problem we used identifying sets (composed uris) to determine the uri of a class. <br>
+
+To integrate the data accordingly we modified the datasets using python, and in particular we generated a unique table for the person EType, which does not actually exist in the original dataset. We merged the three datasets one coming from synthea patients, one coming from emrbots patients and the last one from synthea doctor data. 
+<br>
+Due to a very low number of instances, it was decided for it to be removed from downstream
+integration since it will cause sparsity. We then resolved all data type and format misalignments amont the datasets. All of our
+simulated data was in English, therfore no language misalignments existed. After these steps, we have nine separete csv tables each
+representing an eType with its properties.
+<br>
+
+The data integration process started by loading the ontology in owl format and the data sets into Karma. Once everything has been successfully loaded, we associated to each column its semantic type to align the data with the schema. The sub classes Patient and Doctor where not recognisedby  GraphDB, hence the data properties that were originally connected to them are now linked to the EType Person. The same goes for Hospital, which links are now on the EType Building.
+The same process was applied to the five remaining data sets. No issue was encountered during this phase, except for the modification needed after noticing the error in GraphDB. After creating the models in karma for each data set we exported the files in .ttl format and
+loaded them into GraphDB.<br><br>
+			
+		</p>
+
+	
+		</a>
+	</div>
+	<div id="footer"> 
+		<h5 text align:center>KGE Project a.a. 2022/2023 Alessia Artusi, Emma Salti</h5>
+	</div> <!--chiusura div footer -->
+
+</div> <!-- chiusura div container -->
+    
+    </body>
+
+</html>
